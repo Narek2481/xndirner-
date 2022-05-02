@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 5.Ստեղծեք փոփոխական՝
+        //     var mySite = "http://webtech.am";
+
+        //     Այնուհետև indexOf() մեթոդի միջոցով ստուգեք՝
+        //     եթե հանդիպում է "http://" արտահայտությունը մեր փոփոխականում,
+        //     ապա slice() մեթոդի միջոցով պատկերեք "http://"-ից աջ առկա սիմվոլները,
+        //     եթե չի հանդիպում, ապա պատկերեք "Չի գտնվել" արտահայտությունը:
+
+        let mySite = "http://webtech.am";
+        let checker = 'http://'
+        if (mySite.indexOf(checker) !== -1) {
+            let x =  mySite.indexOf(checker);
+            console.log(mySite.slice(x+checker.length,mySite.length));
+        }else{
+            console.log('chka');
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+         // Давайте сделаем более сложное упражнение.В этом коде ваша функция получает параметр data.Вы должны
+        // изменить приведенный ниже код на основе следующих правил:
+        // Ваша функция всегда должна возвращать обещание
+        // Если dat aэто не число, мгновенно вернуть обещание, отклоненное, и предоставить данные "error"(в строке)
+        // Если data это нечетное число, верните обещание, разрешенное через 1 секунду, и дайте данные "odd"(в строке)
+        // Если dataэто четное число, вернуть обещание, отклоненное через 2 секунды, и предоставить данные "even"(в строке)
+
+        function job(data) {
+            const promis = new Promise((resolve, reject) => {
+                if (typeof (data) == "number") {
+                    if (data % 2 === 0) {
+                        setTimeout(() => {
+                            resolve('odd')
+                        }, 1000)
+                    } else if (data % 2 !== 0) {
+                        setTimeout(() => {
+                            resolve('even')
+                        }, 2000)
+                    }
+                } else {
+                    reject(new Error('tiv chi'))
+                }
+            });
+            promis.then((result) => console.log(result))
+            promis.catch((result) => console.log(result))
+
+        }
+
+        job(4);
+        job(1)
+        job('sakf')
+    </script>
+</body>
+
+</html>

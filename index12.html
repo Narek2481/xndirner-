@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // : indexF(x,k) - վերադարձնում է x զանգվածում k թվի ինդեքսը, իսկ եթե
+        // տվյալ թիվը չկա զանգվածում վերադարձնում է -1
+        // ★ Օրինակ indexF( [ 4,3,2,8,9 ], 3) -ի դեպքում կստանանք 1, քանի որ x[1] = 3
+
+
+
+        let i = -1;
+        let z = -1;
+
+        function indexf(arr, k, i) {
+            i++;
+            let lhg = arr.length
+            if (arr[i] === k) {
+                z = i
+                return z;
+            }
+            if (i <= lhg) {
+                indexf(arr, k, i);
+            }
+            i = -1;
+            return z;
+        }
+        let arr = [1, 2, 5, 8]
+
+        console.log(indexf(arr, 5, i));
+
+
+    </script>
+</body>
+
+</html>

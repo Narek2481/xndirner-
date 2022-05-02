@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Давайте попрактикуемся с простым упражнением.Вы должны изменить приведенный ниже код на основе следующих правил:
+        // Функция job должна возвращать объект обещания(вы находитесь в среде NodeJS, вы можете использовать new Promise)
+        // Обещание должно разрешаться через 2 секунды после вызова job и должно предоставляться hello worldв данных
+
+        function job() {
+            const promise = new Promise((resolve) => resolve('hello world'));
+            return promise.then((result) => {
+                setTimeout(() => {
+                    console.log(result)
+                }, 2000)
+            })
+        }
+
+        job()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         : Հայտարարել զանգված և հաշվել
+        // ★ Միջին քառակուսային = (x[0]2 + x[1]2
+        //     + .. + x[n]2) /n, որտեղ n = x.length
+
+        function m_q(arr) {
+            let l = arr.length;
+            let k = 0;
+            arr.forEach(element => {
+                k += element ** 2
+            });
+            console.log(k)
+            return k / l;
+        }
+        console.log(m_q([1, 2, 3, 4]));
+    </script>
+</body>
+
+</html>

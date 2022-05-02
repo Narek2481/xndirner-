@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // sortA(x) - եթե x զանգվածի տարրերը աճման կարգով են դասավորված,
+        // վերադարձնում է true, հակառակ դեպքում false
+
+        function growth(xArr) {
+            let checker = true
+            for (let i = 0; i < xArr.length - 1; i++) {
+                if (!(xArr[i] < xArr[i + 1])) {
+                    checker = false;
+                }
+            }
+            return checker;
+        }
+
+
+        const arr = [1, 2, 3, 4, 5];
+        const arr2 = [5, 4, 1, 2, 3, 4];
+
+        console.log(growth(arr));
+
+        console.log(growth(arr2));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //         Գրել ֆունկցիա, որը որպես պարամետր ստանում է տող, և եթե տողում կան
+        // մեծատառով սկսվող բառեր, ապա առանձնացնում է բացատով
+        // ★ օրինակ՝ myFunction(“barevErevanJan”), պետք է վերադարձնի barev Erevan Jan
+        //         տեքստը
+
+        let i = -1;
+        let arr = [];
+        function aas(str) {
+            i++;
+            let chcode = str[i].charCodeAt(0)
+            arr.push(str[i]);
+            if (chcode > 65 && chcode < 90) {
+                let lg = arr.length;
+                arr.splice(lg - 1, 0, ' ');
+            }
+            if (i !== str.length - 1) {
+                aas(str);
+            }
+            return arr.join('');
+        }
+
+        console.log(aas('barevErevanJan'));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Հայտարարել զանգված՝ կազմված թվերից ։ Փոխել զանգվածի մեծագույն
+        // և փոքրագույն տարրերի տեղերը
+        // ★ Օրինակ․՝ [1,2,3,4] -ի դեպքում կարող ենք ստանալ [4,2,3,1]
+
+        function max_min(arr) {
+            let max = Math.max(...arr);
+            let i1 = arr.indexOf(max);
+            let i2 = arr.indexOf(Math.min(...arr));
+            arr[i1] = arr[i2];
+            arr[i2] = max;
+            return arr
+        }
+
+        //    alert(max_min([1,2,3,4]));
+        alert(max_min([90, 20, 30, 40]));
+
+        
+    </script>
+</body>
+
+</html>
