@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <input type="text">
+    <button>append</button>
+
+
+    <script>
+        // function fibonacci_series(n) {
+        //     if (n === 1) {
+        //         return [0, 1];
+        //     }
+        //     else {
+        //         let s = fibonacci_series(n - 1);
+        //         s.push(s[s.length - 1] + s[s.length - 2]);
+        //         return s;
+        //     }
+        // };
+
+        // console.log(fibonacci_series(5));
+
+        // let arr = [0, 1];
+        // function fib(n) {
+        //     if (n === 1) {
+        //         return arr;
+        //     }
+        //     let lg = arr.length;
+        //     arr.push(arr[lg - 1] + arr[lg - 2]);
+        //     return fib(n - 1);
+        // }
+
+        // console.log(fib(10));
+
+        // function func(a, b) {
+        //     if (b == 1) {
+        //         return a;
+        //     }else{
+        //         return a * func(a, b - 1);
+        //     }
+        // }
+        // console.log(func(8, 3));
+
+
+        // let i = -1;
+        // let j = 0
+        // function rekursya(arr, k) {
+        //     i++;
+        //     if (arr[i] === k) {
+        //         j++;
+        //     }
+        //     if (i !== arr.length) {
+        //         rekursya(arr, k);
+        //     }
+        //     return j
+        // }
+        // let arr = [10, 20, 89, 4, 10, 10];
+        // console.log(rekursya(arr, 10));
+
+        // let arr2 = [
+        //     1, 2, 3, 4,5,6,7,8,9,10,11,12
+        // ];
+        // arr3 = [1, 7, 1, 3, 5,2,1,5,6,3,7,7]
+        // let i = arr3.length - 2;
+        // // let i = arr2.length-2;
+        // let bo;
+        // function rek(arr) {
+        //     if (arr[i + 1] >= arr[i]) {
+        //         bo = true;
+        //     } else if (!(arr[i + 1] >= arr[i])) {
+        //         bo = false;
+        //         return bo;
+        //     }
+        //     if (i !== 1) {
+        //         i--;
+        //         rek(arr);
+        //     }
+        //     return bo;
+        // }
+        // // console.log(rek(arr2));
+        // console.log(rek(arr3));
+
+
+        // let i = -1;
+        // let z = -1;
+
+        // function indexf(arr, k, i) {
+        //     i++;
+        //     let lhg = arr.length
+        //     if (arr[i] === k) {
+        //         z = i
+        //         return z;
+        //     }
+        //     if (i <= lhg) {
+        //         indexf(arr, k, i);
+        //     }
+        //     i = -1;
+        //     return z;
+        // }
+        // let arr = [1, 2, 5, 8]
+
+        // console.log(indexf(arr, 5,i));
+
+        // let define;
+        // let i = 1;
+
+
+        // function maxf(arr, define) {
+
+        //     let lgth = arr.length;//5
+
+        //     if (arr[i] > arr[i - 1]) {
+        //         define = arr[i];
+        //     }
+        //     if (i !== lgth) {
+        //         i++;
+        //         maxf(arr, define);
+        //     }
+
+
+        //     return define;
+        // }
+        // let arr = [1, 10, 5, 0, 19];
+
+        // console.log(maxf(arr, define));
+
+        // function maxf(arr) {
+        //     let lgth = arr.length;
+        //     if (i <= lgth - 2) {
+        //         if (define < arr[i + 1]) {
+        //             define = arr[i + 1];
+        //         }
+        //         i++;
+        //         maxf(arr);
+        //     }
+        //     return define;
+        // }
+        // let arr = [1, 10, 95,5, 0, 19, 1,85];
+        // let i = 0;
+        // let define = arr[0];
+        // console.log(maxf(arr));
+
+
+
+        // let x = [1, 2, 5, 15, 1,5];
+        // let i = 0;
+        // let j = 0;
+        // let z = [];
+        // debugger
+        // function makeUnique(arr, i, j, arr2) {
+        //     if (i !== j) {
+        //         if (arr[i] === arr[j]) {
+        //             if (arr2.length > 0) {
+        //                 for (let k = 0; k < arr2.length; k++) {
+        //                     if (arr2[i] !== arr[i]) {
+
+        //                     }
+        //                 }
+        //             } else {
+        //                 arr2.push(arr[i]);
+        //             }
+
+        //         }
+        //     }
+        //     if (i < arr.length) {
+        //         i++;
+        //     }
+        //     if (i === arr.length) {
+        //         j++;
+        //         i = 0;
+        //     }
+        //     if (j < arr.length) {
+        //         makeUnique(arr, i, j, arr2);
+        //     }
+        //     return arr2;
+
+        // }
+        // console.log(makeUnique(x, i, j, z));
+
+
+        // console.log('E'.charCodeAt(0)+"hesa");
+        // let akd = 'Asf';
+        // alert(akd[0].charCodeAt(0));
+
+
+
+
+
+
+
+        //         Գրել ֆունկցիա, որը որպես պարամետր ստանում է տող, և եթե տողում կան
+        // մեծատառով սկսվող բառեր, ապա առանձնացնում է բացատով
+        // ★ օրինակ՝ myFunction(“barevErevanJan”), պետք է վերադարձնի barev Erevan Jan
+        //         տեքստը
+
+        // let i = -1;
+        // let arr = [];
+        // function aas(str) {
+        //     i++;
+        //     let chcode = str[i].charCodeAt(0)
+        //     console.log(chcode);
+        //     arr.push(str[i]);
+        //     if (chcode > 65 && chcode < 90) {
+        //         let lg = arr.length;
+        //         arr.splice(lg - 1, 0, ' ');
+        //     }
+        //     if (i !== str.length - 1) {
+        //         aas(str);
+        //     }
+        //     return arr.join('');
+        // }
+
+        // console.log(aas('barevErevanJan'));
+
+
+
+
+
+
+
+        // function func() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(8)
+        //         }, 2000);
+        //     });
+        // }
+
+
+        // const p = func();
+        // const p2 =p.then((result) => console.log(result))
+
+
+
+
+
+
+
+
+
+        // Ֆունկցիան ստանում է զանգված և գտնում այդ զանգվածի մեծագույն և փոքրագույն
+        // տարրերի գումարը
+        // function max_min(myArr) {
+        //     let max = myArr[0];
+        //     let min = myArr[0];
+        //     for (let i = 0; i < myArr.length; i++) {
+        //         if (myArr[i] < max) {
+        //             max = myArr[i];
+        //         }
+        //         if(myArr[i] > min){
+        //             min = myArr[i];
+        //         }
+
+        //     }
+        //     return min+max;
+        // }
+
+        // const arr = [1,17,18,5,4];
+        // console.log(max_min(arr));
+
+
+
+        // sortA(x) - եթե x զանգվածի տարրերը աճման կարգով են դասավորված,
+        // վերադարձնում է true, հակառակ դեպքում false
+
+        // function growth(xArr) {
+        //     let checker = true
+        //     for (let i = 0; i < xArr.length - 1; i++) {
+        //         if (!(xArr[i] < xArr[i + 1])) {
+        //             checker = false;
+        //         }
+        //     }
+        //     return checker;
+        // }
+
+
+        // const arr = [1, 2, 3, 4, 5];
+        // const arr2 = [5, 4, 1, 2, 3, 4];
+
+        // console.log(growth(arr));//true
+
+        // console.log(growth(arr2));//false
+
+
+        // Сделайте функцию, возвращающую промис, внутри которого установлена случайная задержка от 1 до 10 секунд.
+        // Пусть своим результатом промис возвращает эту задержку.
+        // С помощью цикла и вашей функции заполните массив 10-ю промисами.
+        // let random = Math.random * 1000;
+        // let promise = new Promise((resolve, reject) => {
+
+        //     resolve(
+
+        //         setTimeout((random) => {
+        //             const arr = [];
+        //             arr.push(random);
+        //             return arr;
+        //         }, (random)))
+        // })
+        // promise.then((arr) => {
+        //     let random = Math.random * 1000
+        //     arr.push(random)
+        //     return arr
+        // })
+
+
+
+        // let students = ["Տիգրան", "John", "Սամվել"];
+        // for (let i = 0; i < students.length; i++) {
+        //     let caker;
+        //     for (let j = 0; j < students[i].length; j++) {
+        //         if (!(students[i].charCodeAt(j) >= 1329 && students[i].charCodeAt(j) <= 1414)) {
+        //             caker = students[i];
+        //         }
+        //     }
+        //     if (caker !== undefined) {
+        //         alert(caker);
+        //     }
+        // }
+
+
+
+
+
+
+
+        // 5.Ստեղծեք փոփոխական՝
+        //     var mySite = "http://webtech.am";
+
+        //     Այնուհետև indexOf() մեթոդի միջոցով ստուգեք՝
+        //     եթե հանդիպում է "http://" արտահայտությունը մեր փոփոխականում,
+        //     ապա slice() մեթոդի միջոցով պատկերեք "http://"-ից աջ առկա սիմվոլները,
+        //     եթե չի հանդիպում, ապա պատկերեք "Չի գտնվել" արտահայտությունը:
+
+        // let mySite = "http://webtech.am";
+        // let checker = 'http://'
+        // if (mySite.indexOf(checker) !== -1) {
+        //     let x =  mySite.indexOf(checker);
+        //     console.log(mySite.slice(x+checker.length,mySite.length));
+        // }else{
+        //     console.log('chka');
+        // }
+
+
+        // let promise = new Promise(function (resolve, reject) {
+        //     setTimeout(function () {
+        //         resolve('string');
+        //     }, 3000);
+        // });
+
+
+        // promise.then(
+        //     function (result) {
+        //         return result + '1';
+        //     }
+        // ).then(
+        //     function (result) {
+        //         return result + '2';
+        //     }
+        // ).then(
+        //     function (result) {
+        //         return result + '3';
+        //     }
+        // ).then(
+        //     function (result) {
+        //         console.log(result);
+        //     }
+        // );
+
+        // let promises = [
+        //     new Promise(resolve => resolve(1)),
+        //     new Promise(resolve => resolve(2)),
+        //     new Promise(resolve => resolve(3))
+        // ];
+
+        // let promis = new Promise((resolve,reject)=>{
+        //     setTimeout( ()=> resolve(12),2000)
+        // })
+        // promis.then((rseultat=> console.log(rseultat)))
+
+        // let promises = [
+        //     new Promise(resolve => setTimeout(() => resolve(1), 1000)),
+        //     new Promise(resolve => setTimeout(() => resolve(2), 2000)),
+        //     new Promise(resolve => setTimeout(() => resolve(3), 3000)),
+        // ];
+        // Promise.race(promises).then(function (res) {
+        //     console.log(res);
+        // });
+
+
+
+
+
+
+
+
+
+        // Давайте попрактикуемся с простым упражнением.Вы должны изменить приведенный ниже код на основе следующих правил:
+        // Функция job должна возвращать объект обещания(вы находитесь в среде NodeJS, вы можете использовать new Promise)
+        // Обещание должно разрешаться через 2 секунды после вызова job и должно предоставляться hello worldв данных
+
+        // function job() {
+        //     const promise = new Promise((resolve) => resolve('hello world'));
+        //     return promise.then((result) => {
+        //         setTimeout(() => {
+        //             console.log(result)
+        //         }, 2000)
+        //     })
+        // }
+
+        // job()
+
+
+
+        // Давайте сделаем более сложное упражнение.В этом коде ваша функция получает параметр data.Вы должны
+        // изменить приведенный ниже код на основе следующих правил:
+        // Ваша функция всегда должна возвращать обещание
+        // Если dat aэто не число, мгновенно вернуть обещание, отклоненное, и предоставить данные "error"(в строке)
+        // Если data это нечетное число, верните обещание, разрешенное через 1 секунду, и дайте данные "odd"(в строке)
+        // Если dataэто четное число, вернуть обещание, отклоненное через 2 секунды, и предоставить данные "even"(в строке)
+
+        // function job(data) {
+        //     const promis = new Promise((resolve, reject) => {
+        //         if (typeof (data) == "number") {
+        //             if (data % 2 === 0) {
+        //                 setTimeout(() => {
+        //                     resolve('odd')
+        //                 }, 1000)
+        //             } else if (data % 2 !== 0) {
+        //                 setTimeout(() => {
+        //                     resolve('even')
+        //                 }, 2000)
+        //             }
+        //         } else {
+        //             reject(new Error('tiv chi'))
+        //         }
+        //     });
+        //     promis.then((result) => console.log(result))
+        //     promis.catch((result) => console.log(result))
+
+        // }
+
+        // job(4);
+        // job(1)
+        // job('sakf')
+
+
+        // var a = 5;
+        // setTimeout(function timeout() {
+        //     console.log(a+' 1');
+        //     a = 10;
+        // }, 0);
+
+        // var p = new Promise(function (resolve, reject) {
+        //     console.log(a + ' 2');
+        //     a = 25;
+        //     resolve();
+        // });
+
+        // p.then(function () {
+        //     // some code
+        // });
+
+        // console.log(a+' 3');
+
+
+
+        // let promises = [
+        //     new Promise(resolve => resolve(1)),
+        //     new Promise(resolve => resolve(2)),
+        //     new Promise(resolve => resolve(3))
+        // ];
+        // Promise.all(promises).then(function (res) {
+        //     console.log(res);
+        // });
+
+
+        // Հայտարարել զանգված՝ կազմված թվերից ։ Փոխել զանգվածի մեծագույն
+        // և փոքրագույն տարրերի տեղերը
+        // ★ Օրինակ․՝ [1,2,3,4] -ի դեպքում կարող ենք ստանալ [4,2,3,1]
+
+        //     function max_min(arr) {
+        //         let max = Math.max(...arr);
+        //         let i1 = arr.indexOf(max);
+        //         let i2 = arr.indexOf(Math.min(...arr));
+        //         arr[i1] = arr[i2] ;
+        //         arr[i2] = max;
+        //         return arr
+        //     }
+
+        // //    alert(max_min([1,2,3,4]));
+        //    alert(max_min([90,20,30,40]));
+
+        //         : Հայտարարել զանգված և հաշվել
+        // ★ Միջին քառակուսային = (x[0]2+x[1]2
+        //  + .. + x[n]2)/n, որտեղ n = x.length
+
+        // function m_q(arr) {
+        //     let l = arr.length;
+        //     let k = 0;
+        //     arr.forEach(element => {
+        //         k+= element**2
+        //     });
+        //     console.log(k)
+        //     return k / l;
+        // }
+        // console.log(m_q([1, 2,3,4]));
+
+
+
+
+
+
+        //         : Ունենք անուններով լի զանգված
+        //          ★ բոլոր անունները ցուցադրել h1 -ի մեջ
+        //          ★ ունենք input , երբ կգրվի այնտեղ անուն և կսեղմվի append կոճակին, այդ բառը
+        //          կավելացվի զանգվածին և h1 -ի պարունակությունը կթարմացվի
+        //          ★ երբ կսեղմվի remove կոճակին, ապա զանգվածից կհեռացվի հենց այդ բառը ,
+        //          հակառակ դեպքում, եթե մուտքագրված բառը չկա մեր զանգվածում, էկրանին
+        //          ցուցադրել Error
+
+
+
+
+
+
+
+        const btn = document.querySelector('button');
+        let names = ['Narek', 'Karen', 'Artyom'];
+        function clickAppend() {
+            const zagalovk = document.querySelector('h1');
+            zagalovk.innerHTML = '';
+            const inp = document.querySelector('input');
+            function append(arr) {
+                arr.forEach(element => {
+                    zagalovk.innerHTML += element;
+                    zagalovk.innerHTML += ' ';
+                });
+            }
+            names.push(inp.value);
+            append(names);
+            inp.value = '';
+        }
+        clickAppend();
+        btn.addEventListener('click', clickAppend);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
